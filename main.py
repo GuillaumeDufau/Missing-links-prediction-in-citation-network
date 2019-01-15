@@ -111,7 +111,7 @@ def features(paper1,paper2):
     #     distance=1/len(nx.shortest_path(G, paper1, paper2))
     # except:
     #     distance=0
-    
+
     years_diff=int(year[idx_paper1])-int(year[idx_paper2])
 
     ## Features over the graph
@@ -310,20 +310,19 @@ plt.show()
 ### Best hidden_layer_size for alpha=1e-5: (65, 21)
 
 # ## Tolerance
-# import matplotlib.pyplot as plt
-# tols = [1e-4, 5e-5, 1e-5, 5e-6]
-# f1_scores = []
-# for tol in tols:
-#     tols.append(tol)
-#     from sklearn.neural_network import MLPClassifier
-#     clf = MLPClassifier(solver='adam', alpha=4e-4, activation="relu", tol= tol, max_iter=250,
-#                 hidden_layer_sizes=(65,18), verbose=1)
-#     f1 = execute_prediction(clf, f"NN MLP with Adam, tol={tol}")
-# plt.semilogx(tols, f1_scores)
-# plt.xlabel("Tolerance")
-# plt.ylabel("F1 score")
-# plt.title("F1 score with NN MLP with Adam")
-# plt.show()
+tols = [1e-4, 5e-5, 1e-5, 5e-6]
+f1_scores = []
+for tol in tols:
+    tols.append(tol)
+    from sklearn.neural_network import MLPClassifier
+    clf = MLPClassifier(solver='adam', alpha=4e-4, activation="relu", tol= tol, max_iter=250,
+                hidden_layer_sizes=(65,18), verbose=1)
+    f1 = execute_prediction(clf, f"NN MLP with Adam, tol={tol}")
+plt.semilogx(tols, f1_scores)
+plt.xlabel("Tolerance")
+plt.ylabel("F1 score")
+plt.title("F1 score with NN MLP with Adam")
+plt.show()
 # ### Best Tolerance rate = 5e-5
 
 

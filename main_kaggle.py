@@ -114,7 +114,7 @@ def features(paper1,paper2):
     #     distance=1/len(nx.shortest_path(G, paper1, paper2))
     # except:
     #     distance=0
-    
+
     years_diff=int(year[idx_paper1])-int(year[idx_paper2])
 
     ## Features over the graph
