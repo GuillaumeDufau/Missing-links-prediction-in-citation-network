@@ -8,7 +8,7 @@ Edges have been deleted at random from a citation network. The objective is to r
 
 Please find in a pdf format the report for this project.
 
-Here are the results of our team - *The stormtroopers* - top 23%:
+Here are the results of our team - **The stormtroopers** - top 23%:
 [kaggle/evaluation](https://www.kaggle.com/c/inf554-2018/leaderboard)
 
 ## Getting Started
